@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Shimmer skeleton animation ── */
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position:  1000px 0; }
+}
+
+.shimmer {
+  background-color: #1f2937;
+  background-image: linear-gradient(
+    90deg,
+    #1f2937 0px,
+    #2d3748 40px,
+    #374151 80px,
+    #2d3748 120px,
+    #1f2937 160px
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.8s infinite linear;
+}
+
+/* ── Hide scrollbar for category tab strip ── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
